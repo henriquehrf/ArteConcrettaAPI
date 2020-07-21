@@ -4,14 +4,16 @@ using ArteConcrettaEntity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ArteConcrettaEntity.Migrations
 {
     [DbContext(typeof(ArteConcrettaContext))]
-    partial class ArteConcrettaContextModelSnapshot : ModelSnapshot
+    [Migration("20200721025922_AdicionadoTabelaDeLancamentos")]
+    partial class AdicionadoTabelaDeLancamentos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

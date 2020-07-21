@@ -1,26 +1,23 @@
-﻿using ArteConcrettaEntity.Entities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ArteConcrettaEntity
+namespace ArteConcrettaEntity.Entities
 {
-	public class Caixa
+	public class TipoLancamento
 	{
 		[Key]
 		[Column(Order = 1)]
-		public int ID { get; set; }
+		public int IDTipoLancamento { get; set; }
 
 		[Column(Order = 2)]
 		[MaxLength(50)]
-		[Required]
 		public string Nome { get; set; }
 
 		[Column(Order = 3)]
-		[Required]
-		public decimal Saldo { get; set; }
+		public char EntradaSaida { get; set; }
 
-		public ICollection<ContaPagarReceber> ContasPagarRecebe { get; set; }
+
 		public ICollection<Lancamento> Lancamentos { get; set; }
 	}
 }
