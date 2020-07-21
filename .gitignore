@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/ArteConcrettaAPI/.vs/ArteConcrettaAPI
+/ArteConcrettaAPI/ArteConcrettaAPI/bin/Debug/netcoreapp3.1
+/ArteConcrettaAPI/ArteConcrettaAPI/obj
+/ArteConcrettaAPI/ArteConcrettaCore/bin/Debug/netcoreapp3.0
+/ArteConcrettaAPI/ArteConcrettaCore/obj
+/ArteConcrettaAPI/ArteConcrettaEntity/bin/Debug
+/ArteConcrettaAPI/ArteConcrettaEntity/obj
