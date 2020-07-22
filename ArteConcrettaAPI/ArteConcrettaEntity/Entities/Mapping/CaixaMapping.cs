@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ArteConcrettaEntity
 {
-	public class Caixa
+	public class CaixaMapping
 	{
 		[Key]
 		[Column(Order = 1)]
@@ -20,7 +20,7 @@ namespace ArteConcrettaEntity
 		[Required]
 		public decimal Saldo { get; set; }
 
-		public ICollection<ContaPagarReceber> ContasPagarRecebe { get; set; }
-		public ICollection<Lancamento> Lancamentos { get; set; }
+		public ICollection<ContaPagarReceberMapping> ContasPagarRecebe { get; set; }
+		public ICollection<LancamentoMapping> Lancamentos { get; set; }
 	}
 }

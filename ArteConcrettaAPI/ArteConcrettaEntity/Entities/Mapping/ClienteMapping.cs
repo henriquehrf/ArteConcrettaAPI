@@ -4,20 +4,23 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ArteConcrettaEntity.Entities
 {
-	public class TipoLancamento
+	public class ClienteMapping
 	{
 		[Key]
 		[Column(Order = 1)]
-		public int IDTipoLancamento { get; set; }
+		public int IDCliente { get; set; }
 
-		[Column(Order = 2)]
+		[Required]
 		[MaxLength(50)]
+		[Column(Order = 2)]
 		public string Nome { get; set; }
 
 		[Column(Order = 3)]
-		public char EntradaSaida { get; set; }
+		public string Contato { get; set; }
 
+		[Column(Order = 4)]
+		public string Endereco { get; set; }
 
-		public ICollection<Lancamento> Lancamentos { get; set; }
+		public ICollection<ContaPagarReceberMapping> ContaPagarRecebe { get; set; }
 	}
 }

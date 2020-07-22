@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ArteConcrettaEntity.Entities
 {
-	public class Lancamento
+	public class LancamentoMapping
 	{
 		[Key]
 		[Column(Order = 1)]
@@ -28,9 +28,9 @@ namespace ArteConcrettaEntity.Entities
 		[Required]
 		public DateTime DataLancamento { get; set; }
 
-		public Caixa Caixa { get; set; }
+		public CaixaMapping Caixa { get; set; }
 
-		public TipoLancamento TipoLancamento { get; set; }
+		public TipoLancamentoMapping TipoLancamento { get; set; }
 
 	}
 }

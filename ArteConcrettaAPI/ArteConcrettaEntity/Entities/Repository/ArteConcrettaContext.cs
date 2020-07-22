@@ -1,33 +1,41 @@
-﻿using ArteConcrettaEntity.Entities;
+﻿using ArteConcrettaCore.Models;
+using ArteConcrettaEntity.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ArteConcrettaEntity
 {
 	public class ArteConcrettaContext : DbContext
 	{
-		public DbSet<Caixa> Caixa { get; set; }
+		public DbSet<CaixaMapping> Caixa { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
 
 			modelBuilder
-				.Entity<Caixa>()
+				.Entity<CaixaMapping>()
 				.ToTable("Caixa")
 				.HasKey("ID");
 
 			modelBuilder
-				.Entity<Cliente>()
+				.Entity<ClienteMapping>()
 				.ToTable("Cliente")
 				.HasKey("IDCliente");
 
 			modelBuilder
-				.Entity<ContaPagarReceber>()
+				.Entity<ContaPagarReceberMapping>()
 				.ToTable("ContaPagarReceber")
 				.HasKey("IDContaPagarReceber");
+
+			modelBuilder
+				.Entity<TipoLancamentoMapping>()
+				.ToTable("TipoLancamento")
+				.HasKey("IDTipoLancamento");
+
+			modelBuilder
+				.Entity<LancamentoMapping>()
+				.ToTable("Lancamento")
+				.HasKey("IDLancamento");
 		}
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

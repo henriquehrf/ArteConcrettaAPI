@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace ArteConcrettaEntity
 {
-	public class RepositorioBase<T> : IDisposable, IRepositorio<T> where T : class
+	public class RepositoryBase<T> : IDisposable, IRepository<T> where T : class
 	{
 		protected readonly ArteConcrettaContext _contexto;
 
-		public RepositorioBase(ArteConcrettaContext context)
+		public RepositoryBase(ArteConcrettaContext context)
 		{
 			_contexto = context;
 		}

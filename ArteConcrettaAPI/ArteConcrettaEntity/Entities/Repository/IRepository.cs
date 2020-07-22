@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace ArteConcrettaEntity
 {
-	public interface IRepositorio<T> where T : class
+	public interface IRepository<T> where T : class
 	{
 		IEnumerable<T> Todos { get; }
 		void Incluir(T obj);

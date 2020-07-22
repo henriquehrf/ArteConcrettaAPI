@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace ArteConcrettaEntity.Entities
 {
-	public class ContaPagarReceber
+	public class ContaPagarReceberMapping
 	{
 		[Key]
 		[Column(Order = 1)]
@@ -43,8 +43,8 @@ namespace ArteConcrettaEntity.Entities
 		[ForeignKey("Caixa")]
 		public int? IDCaixa { get; set; }
 		
-		public Cliente Cliente { get; set; }
-		public Caixa Caixa { get; set; }
+		public ClienteMapping Cliente { get; set; }
+		public CaixaMapping Caixa { get; set; }
 
 	}
 }
